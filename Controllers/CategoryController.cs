@@ -26,9 +26,18 @@ namespace MyApp.Namespace
         [HttpPost]
         public IActionResult Create(Category category)
         {
+            // if(category.Name == category.DisplayOrder)
+            // {
+            //     ModelState.AddModelError("name","Can be same ");
+            // }
+            if (ModelState.IsValid)
+            {
+                
             _db.Categories.Add(category);
             _db.SaveChanges();
-            return RedirectToAction("Index","Category");
+             return RedirectToAction("Index","Category");
+            }
+            return View();
         }
 
     }
