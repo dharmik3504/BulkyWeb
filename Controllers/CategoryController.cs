@@ -1,6 +1,7 @@
 using BulkyWeb;
-using BulkyWeb.Data;
+using Bulky.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
+using Bulky.Models;
 
 namespace MyApp.Namespace
 {
